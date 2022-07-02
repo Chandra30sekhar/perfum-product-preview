@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 550px;
+    height: 400px;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.inner-1{
+    position: relative;
+    max-width: 50%;
+    overflow: hidden;
+    border-top-left-radius: 0.9em;
+    border-bottom-left-radius: 0.9em;
+    height: 450px;
+    display: flex;
+    /* background: url('./images/image-product-desktop.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+#img-desktop{
+    height: 400px;
+    max-width: 100%;
+    border-bottom-left-radius: 0.9em;
+}
+
+#img-mobile{
+    display: none;
+}
+
+.inner-2{
+    position: relative;
+    /*display: flex;*/
+    padding: 15px;
+    max-width: 50%;
+}
+
+#perfum{
+    color: hsl(228, 12%, 48%);
+    font-weight: 300;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 1px;
+}
+
+h2{
+    font-weight: 700;
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+#price{
+    font-family: 'Fraunces', serif;
+    font-weight: 700; 
+    font-size: 1.5em;
+    color: hsl(158, 36%, 37%);
+    margin-right: 20px;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 0.25em;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+.btn>img{
+    max-height: 50px;
+    max-width: 50px;
+    margin-right: 5px;
+}
+
+.btn:hover{
+    transition: 0.2s;
+    background-color: rgb(15, 61, 15);
+}
+
+@media (max-width: 600px) {
+
+    .container{
+        width: 350px;
+        height: 600px;
+        flex-direction: column;
+    }
+
+    .inner-1{
+        max-width: 400px;
+        height: 250px;
+        border-top-left-radius: 0.9em;
+        border-top-right-radius: 0.9em;
+        border-bottom-left-radius: 0;
+    }
+
+    .inner-2{
+        max-width: 300px;
+        max-height: 300px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    #price-p{
+        margin-bottom: 5px;
+    }
+
+    .inner-2>p{
+        margin-bottom: 1px;
+    }
+
+    #img-desktop{
+        display: none;
+    }
+
+    #img-mobile{
+        display: block;
+    }
+
+    .btn{
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: auto;
+        width: 300px;
+    }
+    
+}
